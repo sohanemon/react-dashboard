@@ -1,4 +1,4 @@
-import ProjectHead from "../../projects/project-head";
+import ProjectHead from "../projects/project-head";
 import { IoMdContact } from "react-icons/io";
 import { MdCall, MdOutlineMessage } from "react-icons/md";
 import data from "./data";
