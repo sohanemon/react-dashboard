@@ -18,12 +18,12 @@ const Navbar = () => {
         <div>
           <img
             className='h-12 w-12 rounded-full'
-            src='https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
+            src='https://avatars.githubusercontent.com/u/42204040?s=400&u=116dd62a437a73c9b15468d1ea34afae9d895871&v=4'
             alt=''
           />
         </div>
         <div>
-          <h4 className='font-semibold '>John Don</h4>
+          <h4 className='font-semibold '>Sohan Emon</h4>
           <p className='text-sm text-gray-400'>Super Admin</p>
         </div>
       </div>
