@@ -3,7 +3,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { SidebarContext } from "../App";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const { setSidebarVisibility } = useContext(SidebarContext);
   return (
     <div className='flex justify-between bg-white items-center shadow-md p-4'>
@@ -14,7 +14,7 @@ const Navbar = () => {
         <GiHamburgerMenu size={"20px"} />
         <h2 className='font-semibold text-xl'>Dashboard</h2>
       </div>
-      <div>
+      <div className='hidden md:block'>
         <div className=' border-2  rounded-full py-2 px-3 flex items-center gap-5'>
           <AiOutlineSearch size={"20px"} color={"gray"} />
           <input type='text' placeholder='search here' />

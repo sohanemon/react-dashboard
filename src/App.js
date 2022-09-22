@@ -13,19 +13,21 @@ function App() {
         value={{ sidebarVisibility, setSidebarVisibility }}
       >
         <div className='flex'>
-          <div className={`${sidebarVisibility ? "w-1/4" : "hidden"}`}>
+          <div className={`${sidebarVisibility ? "w-7/8 md:w-1/4" : "hidden"}`}>
             <Sidebar />
           </div>
           <div
             className={`${
-              sidebarVisibility ? "w-3/4" : "w-full"
+              sidebarVisibility ? "w-1/12 md:w-3/4 overflow-hidden " : "w-full"
             } mx-auto bg-body`}
           >
             <Navbar />
-            <CardContainer />
-            <div className='grid grid-cols-3'>
-              <Projects />
-              <Customer />
+            <div className={`${sidebarVisibility ? "hidden sm:block" : ""}`}>
+              <CardContainer />
+              <div className='grid grid-cols-1 md:grid-cols-3'>
+                <Projects />
+                <Customer />
+              </div>
             </div>
           </div>
         </div>
