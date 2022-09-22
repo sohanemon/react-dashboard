@@ -17,7 +17,11 @@ const Navbar = (props) => {
       <div className='hidden md:block'>
         <div className=' border-2  rounded-full py-2 px-3 flex items-center gap-5'>
           <AiOutlineSearch size={"20px"} color={"gray"} />
-          <input type='text' placeholder='search here' />
+          <input
+            type='text'
+            className='bg-transparent placeholder:text-gray-400 border-none outline-none text-gray-500'
+            placeholder='search here'
+          />
         </div>
       </div>
       <div className='flex gap-4'>
