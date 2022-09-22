@@ -10,8 +10,8 @@ const Customer = () => {
       </div>
       <br />
       <section className='p-2 space-y-5'>
-        {data.map((el) => (
-          <TableRow {...el} key={el.image} />
+        {data.map((el, i) => (
+          <TableRow {...el} key={i} />
         ))}
       </section>
     </div>

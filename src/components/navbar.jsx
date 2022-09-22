@@ -1,10 +1,16 @@
+import { useContext } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { SidebarContext } from "../App";
 
 const Navbar = () => {
+  const { setSidebarVisibility } = useContext(SidebarContext);
   return (
     <div className='flex justify-between bg-white items-center shadow-md p-4'>
-      <div className='flex items-center gap-2'>
+      <div
+        onClick={() => setSidebarVisibility((i) => !i)}
+        className='flex items-center gap-2 cursor-pointer'
+      >
         <GiHamburgerMenu size={"20px"} />
         <h2 className='font-semibold text-xl'>Dashboard</h2>
       </div>
@@ -17,7 +23,7 @@ const Navbar = () => {
       <div className='flex gap-4'>
         <div>
           <img
-            className='h-12 w-12 rounded-full'
+            className='h-12 w-12 rounded-full '
             src='https://avatars.githubusercontent.com/u/42204040?s=400&u=116dd62a437a73c9b15468d1ea34afae9d895871&v=4'
             alt=''
           />

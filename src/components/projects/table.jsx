@@ -4,13 +4,15 @@ const Table = () => {
   return (
     <table className='table-fixed w-full'>
       <thead className='font-semibold border-y'>
-        <td className='py-2'>Project title</td>
-        <td className='py-2'>Department</td>
-        <td className='py-2'>Status</td>
+        <tr>
+          <td className='py-2'>Project title</td>
+          <td className='py-2'>Department</td>
+          <td className='py-2'>Status</td>
+        </tr>
       </thead>
       <tbody>
-        {data.map((el) => (
-          <TableRow {...el} />
+        {data.map((el, i) => (
+          <TableRow key={i} {...el} />
         ))}
       </tbody>
     </table>

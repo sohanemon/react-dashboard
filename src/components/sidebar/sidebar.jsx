@@ -2,9 +2,20 @@ import { MdBorderColor, MdInventory2, MdDashboard } from "react-icons/md";
 import { BiConfused } from "react-icons/bi";
 import { RiCustomerService2Fill, RiAccountPinCircleFill } from "react-icons/ri";
 import { AiFillProject } from "react-icons/ai";
-const Sidebar = () => {
+import { useContext, useEffect, useRef } from "react";
+import { SidebarContext } from "../../App";
+const Sidebar = (props) => {
+  const sidebar = useRef();
+  const { sidebarVisibility, setSidebarVisibility } =
+    useContext(SidebarContext);
+  useEffect(() => {
+    // if (sidebarVisibility) sidebar.current.classList.remove("hidden");
+    // else sidebar.current.classList.add("hidden");
+    return () => {};
+  }, [sidebarVisibility]);
+
   return (
-    <nav className='bg-pink-500 h-full pl-8'>
+    <nav className='bg-pink-500 h-full pl-8' ref={sidebar}>
       <header className='text-4xl text-white pt-4 pb-8 flex items-center gap-4'>
         <BiConfused />
         Accusoft
